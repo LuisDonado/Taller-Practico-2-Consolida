@@ -64,7 +64,7 @@ class MunicipioController extends Controller
     public function edit($id)
     {
         $municipio = municipio::find($id);
-        $municipios = DB::table('tb_municipio')
+        $departamentos = DB::table('tb_municipio')
             ->orderBy('muni_nomb')
             ->get();
         return view('municipio.edit', ['municipio' => $municipio, 'departamentos' => $departamentos]);
